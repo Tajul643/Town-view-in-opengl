@@ -1,5 +1,4 @@
-# Town-view-in-opengl
-
+/
 #include<windows.h>
 #include <GL/glut.h>
 #include <stdlib.h>
@@ -184,35 +183,6 @@ void flag()
 }
 
 
-void shaheed_minar()
-{
-    glColor3f(0.0, 0.0, 0.0);
-    rectangle(-270,-9,-268,60);
-    rectangle(-262,-9,-260,60);
-    rectangle(-268,58,-260,60);
-
-    rectangle(-255,-9,-253,65);
-    rectangle(-247,-9,-245,65);
-    rectangle(-255,62,-245,65);
-
-    glColor3f(0.9, 0.0, 0.0);
-    circle(12,20,-231,40);
-
-    glColor3f(0.0, 0.0, 0.0);
-    rectangle(-240,-9,-238,75);
-    rectangle(-232,-9,-230,75);
-    rectangle(-224,-9,-222,75);
-    rectangle(-240,73,-222,75);
-
-    rectangle(-217,-9,-215,65);
-    rectangle(-209,-9,-207,65);
-    rectangle(-217,62,-207,65);
-
-    rectangle(-202,-9,-200,60);
-    rectangle(-194,-9,-192,60);
-    rectangle(-202,58,-192,60);
-
-}
 void tree(int a,int b,int c,int d, int e,int f,int g, int h , int i)
 {
    glColor3f(0.25, 0.25, 0.25);
@@ -275,95 +245,6 @@ void college()
 
 
 }
-void make_plane()
-{
-    glColor3f(0.0, 0.0, 0.0);
-    circle(20,15,0,0);
-    rectangle(0,-15,70,15);
-    glColor3f(0.0, 0.0, 0.0);
-    rectangle1(70,-15,90,35,70,15,90,40);
-    glColor3f(1.0, 0.0, 0.0);
-    rectangle1(30,15,50,15,60,35,55,30);
-
-glColor3f(1.0, 1.0, 1.0);
-circle(5,5,10,0);
-circle(5,5,30,0);
-circle(5,5,50,0);
-circle(5,5,65,0);
-rectangle(-5,-5,0,10);
-
-
-}
-
-void planeMove(){
-pm=pm-.5;
-    if(pm<-500)
-        pm = 300;
-        glutPostRedisplay();
-}
-
-void plane()
-{
-    planeMove();
-    for(int i=0;i<1;i++)
-     {
-
-     glPushMatrix();
-     glTranslatef(pm,250,0);
-     make_plane();
-     glPopMatrix();
-
-    }
-}
-
-void makeprivatecar(){
-    glColor3f(1.0, 0.0, 0.0);
-    circle(5,15,0,0);
-    rectangle(0,-15,60,15);
-
-    glColor3f(0.2, 0.47, 1.0);
-    triangle(5,15,20,20,45);
-    triangle(40,15,60,40,45);
-
-    glColor3f(0, 0, 0);
-    rectangle(20,15,40,45);
-
-    glColor3f(1.0, 0.0, 0.0);
-    circle(5,10,80,-5);
-
-    glColor3f(1.0, 0.0, 0.0);
-    rectangle1(60,-15,80,-15,60,15,80,5);
-
-
-    glColor3f(0, 0, 0);
-    circle(7,14,10,-15);
-    circle(7,14,60,-15);
-
-    glColor3f(1.0, 1.0, 1.0);
-    circle(6,12,10,-15);
-    circle(6,12,60,-15);
-
-}
-void privatecarMove(){
-cm=cm+.5;
-    if(cm>330)
-        cm = -350;
-        glutPostRedisplay();
-}
-
-void privatecar()
-{
-    privatecarMove();
-    for(int i=0;i<1;i++)
-     {
-
-     glPushMatrix();
-     glTranslatef(cm,-50,0);
-     makeprivatecar();
-     glPopMatrix();
-
-    }
-}
 
 void busmake()
 {
@@ -418,143 +299,6 @@ void bus()
      glPopMatrix();
 }
 
-
-void railline()
-{
-    glColor3f(0,0,0);
-    rectangle(-300,-230,300,-225);
-    rectangle(-300,-260,300,-265);
-    int i = 0;
-
-    glColor3f(0.3, 0.3, 0.3);
-    glBegin(GL_QUADS);
-    for(i=-305;i<=300;i=i+30){
-
-        glVertex2d(i,-260);
-        glVertex2d(i+5,-260);
-        glVertex2d(i+20,-225);
-        glVertex2d(i+25,-225);
-
-    }
-    glEnd();
-
-}
-
-void makerail()
-{
-    glColor3f(0, 0, 0);
-    circle(8,15,-70,-2);
-    circle(8,15,-53,-2);
-
-    circle(8,15,-20,-2);
-    circle(8,15,-3,-2);
-
-    circle(8,15,30,-2);
-    circle(8,15,47,-2);
-
-    circle(8,15,75,-2);
-    circle(8,15,93,-2);
-
-    rectangle(-70,0,-70,2);
-
-
-    glColor3f(1, 1, 1);
-    rectangle(-70,0,100,60);
-    glColor3f(0.4, 0.4, 0.4);
-    rectangle1(-100,0,-70,0,-100,20,-70,60);
-    glColor3f(0.75, 0.75, 0.75);
-    rectangle1(-70,60,100,60,-75,70,105,70);
-    glColor3f(1.0, 1.0, 0.7);
-    rectangle1(100,0,104,10,100,60,105,70);
-    glColor3f(0.6, 0.87, 1.0);
-    rectangle1(-100,20,-70,60,-95,35,-75,70);
-    glColor3f(0.4, 0.4, 0.4);
-    circle(12,15,-97,15);
-
-    glColor3f(0, 1, 1);
-    rectangle(-60,10,-50,50);
-    rectangle(-45,30,-35,50);
-    rectangle(-30,30,-20,50);
-    rectangle(-15,30,-5,50);
-
-    rectangle(0,10,10,50);
-    rectangle(15,30,25,50);
-    rectangle(30,30,40,50);
-    rectangle(45,30,55,50);
-
-    rectangle(60,10,70,50);
-    rectangle(75,30,85,50);
-    rectangle(90,30,99,50);
-
-   rectangle(-70,0,-70,2);
-
-
-
-}
-
-void trainMove(){
-tm=tm-1;
-    if(tm<-350)
-        tm = 350;
-
-        glutPostRedisplay();
-}
-void train()
-{
-    trainMove();
-    for(int i=0;i<1;i++)
-     {
-
-     glPushMatrix();
-     glTranslatef(tm,-245,0);
-     makerail();
-     glPopMatrix();
-
-    }
-
-}
-
-void spinDisplay_left()
-{
-   spin = spin - .3;
-
-  glutPostRedisplay();
-}
-void fan()
-{
-    glColor3f(1, 1, 1);
-	rectangle1(-3,0,0,-30,0,30,3,0);
-}
-void windmil()
-{
-    glColor3f(0.95, 0.95, 0.95);
-	rectangle1(-6,-90,6,-90,-3,4,3,4);
-    spinDisplay_left();
-	glPushMatrix();
-	glRotatef(spin, 0.0, 0.0, 10.0);
-	fan();
-	glPopMatrix();
-
-
-}
-
-void windmail()
-{
-    glPushMatrix();
-    glTranslated(90,170,0);
-    windmil();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslated(-220,170,0);
-    windmil();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslated(00,170,0);
-    windmil();
-    glPopMatrix();
-}
 
 void house()
 {
@@ -618,66 +362,6 @@ void tree2()
     glPopMatrix();
 
 }
-void man1()
-{
-    glColor3f(1.0, 1.0, 0.4);
-    rectangle1(-12,-30,12,-30,-8,-15,8,-15);
-    glColor3f(0,0,0);
-    circle(10,20,0,0);
-    glColor3f(0.8, 0.6, 0.0);
-    circle(6,15,-6,-42);
-    circle(6,15,6,-42);
-    glColor3f(0,0,0);
-    rectangle1(-12,-27,12,-27,-12,-40,12,-40);
-    glColor3f(0.8, 0.6, 0.0);
-    rectangle1(-10,-50,-2,-52,-10,-62,-2,-62);
-    rectangle1(10,-50,2,-52,10,-62,2,-62);
-
-
-}
-float mm =75;
-void manmove()
-{
-    mm=mm+.2;
-    if(mm>75)
-        mm = -120;
-        glutPostRedisplay();
-
-}
-
-void man()
-{
-
-     glPushMatrix();
-     glTranslatef(-20,mm,0);
-     man1();
-     glPopMatrix();
-}
-void child1()
-{
-    glColor3f(0.0, 0.0, 0.0);
-    circle(10,20,00,0);
-    rectangle1(-5,0,5,0,-5,-60,5,-60);
-    rectangle1(-5,-55,0,-55,-10,-80,-5,-80);
-    rectangle1(5,-55,0,-55,10,-80,5,-80);
-    rectangle1(-2,-25,2,-25,10,-50,14,-50);
-    rectangle1(-2,-25,2,-25,-14,-50,-10,-50);
-}
-
-void child2()
-{
-    glPushMatrix();
-     glTranslatef(-320,-150,0);
-     child1();
-     glPopMatrix();
-}
-void child()
-{
-    glPushMatrix();
-     glTranslatef(tx,ty,0);
-     child2();
-     glPopMatrix();
-}
 
 void myDisplay()
 {
@@ -689,22 +373,12 @@ void myDisplay()
     ground();
     road();
     tree1();
-    windmail();
     tree2();
 
     flag();
-    shaheed_minar();
-    man();
-    child();
     college();
     house();
-    plane();
-    privatecar();
     bus();
-    railline();
-    train();
-    //man();
-
     glFlush();
 }
 
@@ -723,11 +397,6 @@ void my_keyboard(unsigned char key, int x, int y)
 		case 's':
 			glutIdleFunc(busMove);
 			break;
-
-		case 'm':
-			glutIdleFunc(manmove);
-			break;
-
 		case 'b':
 			 glutIdleFunc(NULL);
 			 break;
@@ -768,9 +437,10 @@ void spe_key(int key, int x, int y)
 	}
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-//    PlaySound("1.wav", NULL, SND_FILENAME| SND_ASYNC);
+     glutInit( & argc, argv );
+    PlaySound("1.wav", NULL, SND_FILENAME| SND_ASYNC);
     glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
     glutInitWindowSize(1500,700);
     glutInitWindowPosition(0,0);
